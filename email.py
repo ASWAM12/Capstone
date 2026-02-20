@@ -43,9 +43,25 @@ Best regards,
     return email
 
 
-# --- multiple input in one line ---
-client = input("Client name: ")
-services_raw = input("Enter services (comma-separated): ")
+import streamlit as st
 
-services_list = services_raw.split(",")  # e.g. "strategy, analytics, training"
-print("\n" + generate_email(services_list, client))
+st.set_page_config(page_title="Email Generator", page_icon="✉️")
+
+st.title("Service Email Generator")
+
+client_name = st.text_input("Client name")
+sender_name = st.text_input("Sender name", value="Ananya")
+
+services = st.multiselect(
+    "Select services",
+    ["strategy", "analytics", "training"],
+)
+
+if st.button("Generate email"):
+    if not client_name:
+        st.warning("Please enter a client name.")
+    elif not services:
+        st.warning("Please select at least one service.")
+    else:
+        email_text = generate_email(services, client_name, sender_name=sender_name)
+        st.text_area("Generated email", email_text, height=320)
