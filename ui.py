@@ -8,7 +8,7 @@ st.set_page_config(page_title="Email Generator", page_icon="✉️")
 st.title("Service Email Generator")
 
 client_name = st.text_input("Client name")
-sender_name = st.text_input("Sender name", value="Ananya")
+sender_name = st.text_input("Sender name", value="Angela Neal")
 
 services = st.multiselect(
     "Select services",
