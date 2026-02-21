@@ -1,3 +1,5 @@
+# email.py
+
 def generate_email(services, client_name, sender_name="Ananya"):
     templates = {
         "strategy": """• Brand positioning and messaging
@@ -13,6 +15,7 @@ def generate_email(services, client_name, sender_name="Ananya"):
 
     sections = []
     unknown = []
+
     for s in services:
         key = s.strip().lower()
         if key in templates:
@@ -38,30 +41,12 @@ If you share your goals and timeline, I’d be happy to recommend next steps.
 Best regards,  
 {sender_name}
 """
+
     if unknown:
         email += "\n\n(P.S. I didn’t recognize: " + ", ".join(unknown) + ")"
+
     return email
 
 
-import streamlit as st
-
-st.set_page_config(page_title="Email Generator", page_icon="✉️")
-
-st.title("Service Email Generator")
-
-client_name = st.text_input("Client name")
-sender_name = st.text_input("Sender name", value="Ananya")
-
-services = st.multiselect(
-    "Select services",
-    ["strategy", "analytics", "training"],
-)
-
-if st.button("Generate email"):
-    if not client_name:
-        st.warning("Please enter a client name.")
-    elif not services:
-        st.warning("Please select at least one service.")
-    else:
-        email_text = generate_email(services, client_name, sender_name=sender_name)
-        st.text_area("Generated email", email_text, height=320)
+# Optional: export the service keys so UI stays in sync
+SERVICE_OPTIONS = ["strategy", "analytics", "training"]
