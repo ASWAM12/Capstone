@@ -1,6 +1,6 @@
 # email.py
 
-def generate_email(services, client_name, sender_name="Ananya"):
+def generate_email(services, client_name, sender_name="Angela Neal"):
     templates = {
         "strategy": """• Brand positioning and messaging
 • Market differentiation
@@ -39,7 +39,8 @@ Thank you for your interest in our services. Based on your selections, we can su
 If you share your goals and timeline, I’d be happy to recommend next steps.
 
 Best regards,  
-{sender_name}
+
+Angela Neal
 """
 
     if unknown:
