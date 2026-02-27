@@ -22,4 +22,4 @@ if st.button("Generate email", type="primary"):
         st.warning("Please select at least one service.")
     else:
         email_text = generate_email(services, client_name.strip()) 
-        st.text_area("Generated email", email_text, height=320)
+        st.markdown(email_text)
