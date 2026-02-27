@@ -33,9 +33,9 @@ offered to help teams understand and consistently apply brand standards."""),
 
     also_templates = {
         "Strategy": "**With Strategy** - We help organizations define clear goals and actionable roadmaps, with workshops and training to support team execution.",
-        "Marketing": "**With Marketing** - we create cohesive brand messaging and campaign strategies, supported by training and workshops to empower your team.",
-        "Technology": "**With Technology** - we provide solutions to streamline processes, organize data, and automate workflows, with training to ensure your team can make the most of them.",
-        "Design": "**With Design** - we craft unique visual identities and branded assets, with workshops to help your team consistently apply your brand standards.",
+        "Marketing": "**With Marketing** - We create cohesive brand messaging and campaign strategies, supported by training and workshops to empower your team.",
+        "Technology": "**With Technology** - We provide solutions to streamline processes, organize data, and automate workflows, with training to ensure your team can make the most of them.",
+        "Design": "**With Design** - We craft unique visual identities and branded assets, with workshops to help your team consistently apply your brand standards.",
     }
 
     sections = []
