@@ -23,3 +23,11 @@ if st.button("Generate email", type="primary"):
     else:
         email_text = generate_email(services, client_name.strip()) 
         st.markdown(email_text)
+
+st.markdown("---")
+
+st.info("Prefer working in Excel? You can use the offline version of the generator below.")
+
+excel_link = "https://cometmail-my.sharepoint.com/:x:/g/personal/nzr220000_utdallas_edu/IQBwiBJSBzLISp2lr8jQlqf-AbSi_bbdEnVka9__rTQFbbk?rtime=LtxaPHJ63kg"
+
+st.link_button("Open Excel Generator", excel_link)
