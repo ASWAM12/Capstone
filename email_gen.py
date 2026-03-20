@@ -53,7 +53,7 @@ offered to help teams understand and consistently apply brand standards."""),
 
     services_text = "\n\n".join(sections)
 
-    # Find unselected services (this MUST be inside the function)
+    # Find unselected services
     unselected = [s for s in templates.keys() if s not in services]
 
     also_available = ""
@@ -84,5 +84,5 @@ Best regards,
     return email
 
 
-# Optional: export the service keys so UI stays in sync
+# Service Keys
 SERVICE_OPTIONS = ["Strategy", "Marketing", "Technology", "Design"]
